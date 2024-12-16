@@ -53,3 +53,25 @@
   # Challenges
     - Initial Setup: Configuring Firebase services for Android and iOS required attention to detail, especially in adding the google-services.json and GoogleService-Info.plist files.
     - Debugging Notifications: Ensuring proper functioning of notifications across various app states (foreground, background, terminated) required testing and fine-tuning.
+_______________________________________________________________________________________________________________________________________________
+# For Task 3
+# Features
+    - Email/Password Authentication: Sign in and sign up functionality.
+    - Phone Authentication: Verify users with phone numbers and OTPs.
+    - Google Sign-In: Allow users to authenticate using their Google accounts.
+    - Auth State Monitoring: Listen for authentication state changes in real-time.
+    - Sign Out: Safely sign out the user from the application.
+
+# Setup and Installation
+To use this module, follow these steps:
+
+# 1. Add Dependencies
+Ensure your pubspec.yaml file includes the following dependencies:
+  - Run flutter pub get to install the dependencies.
+# 2. Configure Firebase
+    - Set up a Firebase project in the Firebase Console.
+    - Add your app (iOS/Android/Web) to the Firebase project.
+    - Download the google-services.json (Android) or GoogleService-Info.plist (iOS) file and add it to your project.
+    - Follow the platform-specific integration steps for Firebase in the official Firebase Documentation.
+# 3. Update Code
+    - Replace the Auth class with the code provided in this module. Ensure your app uses this class to manage authentication operations.
