@@ -75,3 +75,5 @@ Ensure your pubspec.yaml file includes the following dependencies:
     - Follow the platform-specific integration steps for Firebase in the official Firebase Documentation.
 # 3. Update Code
     - Replace the Auth class with the code provided in this module. Ensure your app uses this class to manage authentication operations.
+______________________________________________________________________________________________________________________________________________
+# For Task 4
