@@ -28,8 +28,8 @@ jobs:
       - name: Run tests
         run: flutter test # Optional: Add your test commands here
 
-      - name: Build APK (for Android)
-        run: flutter build apk --release
+      # - name: Build APK (for Android)
+      #   run: flutter build apk --release
 
       - name: Set up Firebase CLI
         run: |
@@ -37,9 +37,9 @@ jobs:
           firebase --version
 
       - name: Authenticate Firebase
-        run: echo "${{ secrets.FIREBASE_SECRET }}" > ${HOME}/firebase-key.json
+        run: echo "${{ secrets.FIREBASE_AUTH_TOKEN }}" > ${HOME}/firebase-key.json
         env:
-          FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
+          FIREBASE_SECRET: ${{ secrets.FIREBASE_AUTH_TOKEN }}
 
       - name: Deploy to Firebase App Distribution (Android)
         run: |
