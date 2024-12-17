@@ -77,3 +77,30 @@ Ensure your pubspec.yaml file includes the following dependencies:
     - Replace the Auth class with the code provided in this module. Ensure your app uses this class to manage authentication operations.
 ______________________________________________________________________________________________________________________________________________
 # For Task 4
+# Setup Instructions
+    - Prerequisites
+      1- Install Flutter and ensure it is set up properly:
+      2- Set up a Firebase Project on Firebase Console.
+        # Steps to Setup
+          - Add Firebase to Your Flutter App:
+          - Use the Firebase CLI to initialize Firebase.
+          - Follow this guide to connect Firebase Analytics: Add Firebase to Flutter.
+          - Add Dependencies:
+            - Add the following dependencies to your pubspec.yaml:
+      3- Configure Firebase Analytics:
+        - Initialize Firebase in your main.dart:
+
+# Project Features
+    - The project integrates Firebase Analytics to log events and user behavior seamlessly.
+    
+## Key functionalities include:
+    1- User Sign-Up Tracking
+      - Logs when a user registers to the application.
+      - Tracks the sign-up method and username.
+    2- User Login Tracking
+      - Logs user logins and the method used.
+      - Handles potential errors gracefully.
+    3- Subscription Events
+      - Logs when users subscribe to a channel.
+    4- Unsubscription Events
+      - Logs when users unsubscribe from a channel.
