@@ -43,6 +43,6 @@ jobs:
 
       - name: Deploy to Firebase App Distribution (Android)
         run: |
-          firebase appdistribution:distribute app-release.apk --app 1:713529200883:android:947b5639fff587a5b22786 --groups Cloud Testers --token ${{ secrets.FIREBASE_AUTH_TOKEN }}
+          firebase appdistribution:distribute app-release.apk --app 1:713529200883:android:947b5639fff587a5b22786 --groups cloud-testers --token ${{ secrets.FIREBASE_AUTH_TOKEN }}
         env:
           FIREBASE_AUTH_TOKEN: ${{ secrets.FIREBASE_AUTH_TOKEN }}
