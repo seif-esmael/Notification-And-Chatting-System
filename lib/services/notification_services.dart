@@ -1,9 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/material.dart';
 import 'package:notifications/firebase_options.dart';
 
 class NotificationServices {
+  static ValueNotifier<String?> notificationBody = ValueNotifier<String?>(null);
   static void foregroundNotificationHandler(RemoteMessage message) async {
     try {
       await Firebase.initializeApp(
@@ -16,6 +18,7 @@ class NotificationServices {
         'body': message.notification?.body,
         'date': message.sentTime?.toString(),
       });
+      notificationBody.value = message.notification?.body;
     } catch (e) {
       print(e.toString());
     }

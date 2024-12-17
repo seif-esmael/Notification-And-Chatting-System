@@ -5,6 +5,7 @@ import 'package:notifications/screens/channels_screen.dart';
 import 'package:notifications/services/auth.dart';
 import 'package:notifications/models/user.dart';
 import 'package:notifications/customs/custom_button.dart';
+import 'package:notifications/services/notification_services.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -42,7 +43,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    _getUserData(); // Fetch user data when the page loads
+    _getUserData();
+    NotificationServices.initNotifications();
   }
 
   @override
@@ -100,6 +102,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   const SizedBox(height: 50),
+
+                  ValueListenableBuilder<String?>(
+                    valueListenable: NotificationServices.notificationBody,
+                    builder: (context, notificationBody, child) {
+                      return Text(
+                        notificationBody ?? "No new notifications",
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.blueGrey,
+                        ),
+                      );
+                    },
+                  ),
+                  const SizedBox(height: 30),
+
 
                   // Go to channels Button
                   CustomButton(
